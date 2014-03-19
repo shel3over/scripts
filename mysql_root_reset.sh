@@ -12,6 +12,7 @@ fi
 
 #run it again with  --skip-grant-tables
 /usr/bin/mysqld_safe  --skip-grant-tables > /dev/null 2>&1 &
+sleep 3
 
 #change the root password 
 mysql -uroot mysql -e "UPDATE mysql.user SET Password=PASSWORD('$new_password') WHERE User='root';"
